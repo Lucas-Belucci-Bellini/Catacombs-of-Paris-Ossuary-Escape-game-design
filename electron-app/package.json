@@ -1,0 +1,41 @@
+{
+  "name": "ossuary-escape",
+  "version": "1.0.0",
+  "description": "Ossuary Escape — Catacombs of Paris",
+  "main": "main.js",
+  "author": "Ossuary Escape Studio",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --dir --win --linux --mac"
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.ossuaryescape.game",
+    "productName": "Ossuary Escape",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "game/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png",
+      "category": "Game"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    }
+  }
+}
