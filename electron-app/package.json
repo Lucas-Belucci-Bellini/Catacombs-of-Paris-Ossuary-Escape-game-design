@@ -10,7 +10,7 @@
     "dist": "electron-builder --dir --win --linux --mac"
   },
   "devDependencies": {
-    "electron": "^29.0.0",
+    "electron": "^45.1.0",
     "electron-builder": "^24.9.1"
   },
   "build": {
